@@ -1,4 +1,3 @@
-# app/repository/item_repository.py
 
 from sqlalchemy.orm import Session
 

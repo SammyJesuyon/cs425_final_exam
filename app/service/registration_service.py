@@ -1,4 +1,3 @@
-# app/service/transaction_service.py
 
 from sqlalchemy.orm import Session
 

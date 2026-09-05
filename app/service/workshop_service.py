@@ -1,4 +1,3 @@
-# app/service/item_service.py
 
 from sqlalchemy.orm import Session
 

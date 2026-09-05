@@ -1,4 +1,3 @@
-# app/repositories/transaction_repository.py
 
 from sqlalchemy.orm import Session
 
