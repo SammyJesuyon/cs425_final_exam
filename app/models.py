@@ -10,7 +10,7 @@ from sqlalchemy import (
     ForeignKey
 )
 from sqlalchemy.orm import relationship
-
+# import datetime
 from app.database import Base
 
 class Workshop(Base):
@@ -64,7 +64,7 @@ class Workshop(Base):
 
 
 class Registration(Base):
-    __tablename__ = "transactions"
+    __tablename__ = "registration"
 
     registration_id = Column(
         Integer,
@@ -94,7 +94,7 @@ class Registration(Base):
     )
 
     registration_date = Column(
-        Date,
+        DATETIME,
         nullable=False
     )
 

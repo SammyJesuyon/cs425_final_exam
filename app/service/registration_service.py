@@ -70,14 +70,14 @@ class RegistrationService:
                 f"was not found."
             )
 
-        if workshop.registration_deadline < datetime.utcnow():
+        if workshop.registration_deadline is datetime.datetime.now:
             raise InvalidDateError(
                 f"Workshop with ID "
                 f"{request.item_id} "
                 f"has passed deadline."
             )
 
-        if RegistrationRepository.get_count_by_workshop_id() == workshop.capacity:
+        if RegistrationRepository.get_count_by_workshop_id(db, request.workshop_id) == workshop.capacity:
             raise MaximumCapacityReachedError(
                 "Maximum capacity reached for this event"
             )
@@ -86,7 +86,7 @@ class RegistrationService:
             student_id=request.student_id,
             student_name=request.student_name,
             student_email=request.student_email,
-            registration_date=request.datetime.utcnow()
+            registration_date=datetime.datetime.now
         )
 
         try:
