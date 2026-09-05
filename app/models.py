@@ -53,7 +53,7 @@ class Workshop(Base):
     )
 
     registration_deadline = Column(
-        DATETIME,
+        Date,
         nullable=False,
     )
 
@@ -94,7 +94,7 @@ class Registration(Base):
     )
 
     registration_date = Column(
-        DATETIME,
+        Date,
         nullable=False
     )
 

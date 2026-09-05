@@ -85,7 +85,7 @@ class RegistrationService:
             student_id=request.student_id,
             student_name=request.student_name,
             student_email=request.student_email,
-            registration_date=datetime.datetime.now
+            registration_date=datetime.date.now
         )
 
         try:
